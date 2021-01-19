@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6881572373269046043}
   - component: {fileID: 4710777547589881399}
   - component: {fileID: 71095518553423556}
+  - component: {fileID: -7476734727282060326}
   m_Layer: 0
   m_Name: Enemy Laser
   m_TagString: Untagged
@@ -114,9 +115,22 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
+--- !u!114 &-7476734727282060326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894575835766210003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f19b809704a0545bfad8f154f3c87a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
