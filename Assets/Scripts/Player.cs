@@ -72,6 +72,8 @@ public class Player : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        // if there's no damageDealer, don't do anything
+        if (!damageDealer) { return; }
         ProcessHit(damageDealer);
     }
 
