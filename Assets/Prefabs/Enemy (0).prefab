@@ -114,6 +114,8 @@ MonoBehaviour:
   maxTimeBetweenShots: 3
   enemyProjectile: {fileID: 1894575835766210003, guid: 020aa440d0b47f4428c07ba00f7267e3,
     type: 3}
+  destroyedVFX: {fileID: 1935905183458448465, guid: e1ddea1a118129249a40ee733f2499d8,
+    type: 3}
   projectileSpeed: -5
 --- !u!58 &-8349078323315157737
 CircleCollider2D:
