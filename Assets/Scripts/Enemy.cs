@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour {
     [SerializeField] GameObject destroyedVFX;
     [SerializeField] float projectileSpeed = -5f;
     [SerializeField] float explosionDuration = 1f;
+    [SerializeField] AudioClip shootSound;
+    [SerializeField] AudioClip destroyedSound;
 
     void Start() {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);    
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Fire() {
+        PlayShootSFX();
         GameObject projectile = Instantiate(enemyProjectile, transform.position, Quaternion.identity);
         projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
     }
@@ -45,11 +48,20 @@ public class Enemy : MonoBehaviour {
         damageDealer.Hit();
         if (health <= 0) {
             Destroy(gameObject);
-            TriggerDestroyedSFX();
+            PlayDestroyedSFX();
+            TriggerDestroyedVFX();
         }
     }
 
-    private void TriggerDestroyedSFX() {
+    private void PlayDestroyedSFX() {
+        AudioSource.PlayClipAtPoint(destroyedSound, Camera.main.transform.position);
+    }
+
+    private void PlayShootSFX() {
+        AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position);
+    }
+
+    private void TriggerDestroyedVFX() {
         GameObject explosion = Instantiate(destroyedVFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
     }

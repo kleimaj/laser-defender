@@ -96,6 +96,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   padding: 1
+  health: 200
+  destroyedSound: {fileID: 8300000, guid: 17bd8bd1a3fc88a4aa499f8809b44a57, type: 3}
   laserPrefab: {fileID: 8598619206511277640, guid: 2d902d5b56b092e4fbf87419969a3179,
     type: 3}
   projectileSpeed: 20
+  projectileFiringPeriod: 0.1
+  shootSound: {fileID: 8300000, guid: 7f3c3aa73be01c440bb9d76ba55e1061, type: 3}
