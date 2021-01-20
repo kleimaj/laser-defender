@@ -25,6 +25,8 @@ public class Player : MonoBehaviour {
     float yMin;
     float yMax;
 
+    Level level;
+
     // Start is called before the first frame update
     void Start() {
         SetUpMoveBoundaries();
@@ -86,6 +88,8 @@ public class Player : MonoBehaviour {
         if (health <= 0) {
             PlayDestroyedSFX();
             Destroy(gameObject);
+            level = FindObjectOfType<Level>();
+            level.LoadNextScene();
         }
     }
 
