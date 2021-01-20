@@ -21,7 +21,6 @@ public class Level : MonoBehaviour {
     }
 
     public void LoadNextScene() {
-        Debug.Log("Loading next scene");
         if (numScenes == currentSceneIndex + 1) {
             SceneManager.LoadScene(0);
         }
