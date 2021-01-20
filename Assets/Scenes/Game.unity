@@ -9780,9 +9780,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfigs:
   - {fileID: 11400000, guid: 42a901b4ce6c1aa43bd7b85f46d07723, type: 2}
+  - {fileID: 11400000, guid: 4afc59dcb40808d43a6bc5845532d56e, type: 2}
   - {fileID: 11400000, guid: 1ac4ae04d6bac9d4a8c8d5873a69bbfd, type: 2}
   - {fileID: 11400000, guid: e8c30f644c1020f4a9e305d3d59c6702, type: 2}
-  - {fileID: 11400000, guid: 4afc59dcb40808d43a6bc5845532d56e, type: 2}
   startingWave: 0
   looping: 1
 --- !u!4 &1413096214

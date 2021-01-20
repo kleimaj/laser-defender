@@ -12,7 +12,16 @@ public class Level : MonoBehaviour {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
-    public void LoadNextScene() { 
+    public void DelayNextScene() {
+        StartCoroutine(WaitAndLoad());
+    }
+    IEnumerator WaitAndLoad() {
+        yield return new WaitForSeconds(2f);
+        LoadNextScene();
+    }
+
+    public void LoadNextScene() {
+        Debug.Log("Loading next scene");
         if (numScenes == currentSceneIndex + 1) {
             SceneManager.LoadScene(0);
         }

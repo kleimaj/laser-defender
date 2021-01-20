@@ -84,12 +84,12 @@ public class Player : MonoBehaviour {
 
     private void ProcessHit(DamageDealer damageDealer) {
         health -= damageDealer.GetDamage();
+        level = FindObjectOfType<Level>();
         damageDealer.Hit();
         if (health <= 0) {
             PlayDestroyedSFX();
+            level.DelayNextScene();
             Destroy(gameObject);
-            level = FindObjectOfType<Level>();
-            level.LoadNextScene();
         }
     }
 
