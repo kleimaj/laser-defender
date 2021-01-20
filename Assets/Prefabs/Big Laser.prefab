@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 4710777547589881399}
   - component: {fileID: 71095518553423556}
   - component: {fileID: -7476734727282060326}
+  - component: {fileID: -5650291111414874731}
   m_Layer: 11
-  m_Name: Enemy Laser
+  m_Name: Big Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1669446577
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9fb5a2742b3b39245a5ddc591c758adc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e1cd81013db53142b3009fd5f2e3570, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -134,3 +135,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!114 &-5650291111414874731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894575835766210003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac98f0f22f01bac49b8b05c1778fc3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpin: 360
