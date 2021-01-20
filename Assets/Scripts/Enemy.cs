@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     [SerializeField] float health = 100;
+    [SerializeField] int score = 150;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
         if (health <= 0) {
+            FindObjectOfType<GameSession>().UpdateScore(score);
             Destroy(gameObject);
             PlayDestroyedSFX();
             TriggerDestroyedVFX();

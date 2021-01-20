@@ -22,6 +22,7 @@ public class Level : MonoBehaviour {
 
     public void LoadNextScene() {
         if (numScenes == currentSceneIndex + 1) {
+            FindObjectOfType<GameSession>().ResetGame();
             SceneManager.LoadScene(0);
         }
         else {
